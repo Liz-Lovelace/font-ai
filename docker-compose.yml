@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  bot:
+    # image: lizlovelace/font-ai
+    build: .
+
+    pull_policy: always
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+    environment:
+      - OPENAI_API_TOKEN=${OPENAI_API_TOKEN}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN} 
