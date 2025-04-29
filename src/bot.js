@@ -64,7 +64,7 @@ export function startTelegramBot() {
     await sendToAdminPanels({ text: `Received message: "${userMessage}"`, username });
 
     try {
-      await bot.sendMessage(chatId, 'Please wait while I create your font...');
+      await bot.sendMessage(chatId, 'Please wait while I create your font... Usually takes 1-5 minutes.');
       
       const prompt = await preparePrompt(userMessage);
       console.log('Prompt for image generation:', prompt);
