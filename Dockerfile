@@ -8,6 +8,9 @@ COPY package.json ./
 # Install dependencies
 RUN npm install
 
+COPY assets/ ./assets/
+COPY mock_image.png ./
+
 # Copy the rest of the application
 COPY . .
 
